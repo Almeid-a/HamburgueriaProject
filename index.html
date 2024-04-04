@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Dev Burguer - A melhor hamburgueria dev!</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/img/hamb-1.png"
+            alt="Logo hamburgueria"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Hambugueria</h1>
+
+            <span class="text-white font-medium">Av. Congonhas 10 , Ponta Grossa - PR</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Ter á Dom - 18:00 as 23:00</span>
+            </div>
+        </div>
+    </header>
+    <!-- FIM DO HEADER -->
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+
+    <!-- INICIO MENU API 
+    <div id="menu" class="grid grid-cols-1 md:grid-cols-2 /*lg:grid-cols-3*/ gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+    </div> -->
+
+    <!-- INICIO MENU -->
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 /*lg:grid-cols-3*/ gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                    src="./assets/img/hamb-1.png"
+                    alt="Assembly Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Assembly Burguer</p>
+                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burguer de 180g, 
+                        queijo prato e maionese da casa.</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 18.90</p>
+                            <button 
+                                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                                data-name="Assembly Burguer"
+                                data-price="18.90"
+                            >
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                    src="./assets/img//hamb-2.png"
+                    alt="C# Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">C# Burguer</p>
+                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burguer de 180g, 
+                        queijo prato e maionese da casa.</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 32.90</p>
+                            <button 
+                                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                                data-name="C# Burguer"
+                                data-price="32.90"
+                            >
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                    src="./assets/img/hamb-3.png"
+                    alt="Java Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Java Burguer</p>
+                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burguer de 180g, 
+                        queijo prato e maionese da casa.</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 26.90</p>
+                            <button 
+                                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                                data-name="Java Burguer"
+                                data-price="26.90"
+                            >
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+            <!-- PRODUTO ITEM -->
+            <div class="flex gap-2">
+                <img
+                    src="./assets/img/hamb-4.png"
+                    alt="Kotlin Burguer"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-bold">Kotlin Burguer</p>
+                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burguer de 180g, 
+                        queijo prato e maionese da casa.</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 22.90</p>
+                            <button 
+                                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                                data-name="Kotlin Burguer"
+                                data-price="22.90"
+                            >
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                </div>
+            </div>
+            <!-- FIM PRODUTO ITEM -->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>
+
+        <!-- GRID BEBIDAS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 /*lg:grid-cols-3*/ gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!-- BEBIDA ITEM -->
+            <div class="flex gap-2 w-full">
+                <img
+                    src="./assets/img/refri-1.png"
+                    alt="Coca-Cola Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                
+                <div class="w-full">
+                    <p class="font-bold">Coca-Cola Lata</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca-Cola Lata"
+                            data-price="6.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM BEBIDA ITEM -->
+
+            <!-- BEBIDA ITEM -->
+            <div class="flex gap-2 w-full">
+                <img
+                    src="./assets/img/refri-2.png"
+                    alt="Guaraná Antartica Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                
+                <div class="w-full">
+                    <p class="font-bold">Guaraná Antarctica Lata</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná Antartica Lata"
+                            data-price="5.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM BEBIDA ITEM -->
+
+        </div>
+        <!-- FIM GRID BEBIDAS -->
+
+    </div>
+    <!-- FIM MENU -->
+
+    <!-- MODAL CART -->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+            <div id="cart-itens" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">R$ 0,00</span></p>
+
+            <p class="text-red-500 hidden" id="cart-warn">Seu carrinho está vazio!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
+                <button id="address-btn" class="bg-green-500 text-white px-4 py-1 rounded">Endereço</button>
+            </div>
+        </div>
+    </div>
+     <!-- FIM MODAL CART -->
+
+    <!-- INICIO MODAL ADDRESS -->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" 
+    id="address-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Informe seu Endereço</h2>
+
+            <div>
+                <div id="pickup" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer address-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fas fa-store text-2xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>Retirar no Local</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="address"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="delivery" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer address-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fas fa-motorcycle text-2xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>Delivery</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="address"/>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="address-form hidden">
+                <div class="inputbox mb-2">
+                    <input type="text" id="name" name="name" placeholder="Insira seu Nome" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline required">
+                </div>
+                <div class="inputbox mb-2">
+                    <input type="text" id="cep" name="cep" placeholder="Insira seu CEP" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline required">
+                </div>
+                <div class="inputbox mb-2 hidden"  id="address-input">
+                    <input type="text" id="endereco" name="endereco" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="inputbox mb-2 hidden" id="number-input">
+                    <input type="text" id="numero" name="numero" placeholder= "Número" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="inputbox mb-2 hidden" id="bairro-input">
+                    <input type="text" id="bairro" name="bairro" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="inputbox mb-2 hidden" id="city-input">
+                    <input type="text" id="cidade" name="cidade" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="inputbox mb-2 hidden" id="state-input">
+                    <input type="text" id="estado" name="estado" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+        </div>
+            
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="return-cart-btn" class="bg-red-500 text-white px-4 py-1 rounded">Voltar</button>
+                <button id="payment-btn" class="bg-green-500 text-white px-4 py-1 rounded">Pagamento</button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM MODAL ADDRESS -->
+
+    <!-- INICIO MODAL PAYMENT -->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[200] items-center justify-center hidden" 
+    id="payment-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Forma de Pagamento:</h2>
+    
+           
+            <div>
+                <div id="dinheiro" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer payment-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fa-solid fa-money-bill text-3xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>Dinheiro</span>
+                            </div>
+                            <div class="ml-10 inputbox hidden" id="troco-input">
+                                <input type="text" id="troco" name="troco" placeholder="Troco para:" class="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="pix" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer payment-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fa-brands fa-pix text-3xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>PIX</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="credit-card" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer payment-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fa fa-credit-card text-3xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>Cartão de Crédito</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment"/>
+                        </div>
+                    </div>
+                </div>
+                <div id="debit-card" class="w-full border-2 border-gray-300 rounded-md mb-2 py-2 px-3 cursor-pointer payment-option">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center w-30">
+                            <div class="text-center w-10">
+                                <i class="fa fa-credit-card text-3xl"></i>
+                            </div>
+                            <div class="ml-2">
+                                <span>Cartão de Debito</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="radio" name="payment"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            <p class="font-bold">Total: <span id="payment-total">R$ 0,00</span></p>
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="return-address-btn" class="bg-red-500 text-white px-4 py-1 rounded">Voltar</button>
+                <button id="finish-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+    <!-- FIM MODAL PAYMENT -->
+
+
+    <!-- BUTTON CART FOOTER -->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button 
+            class="flex items-center gap-2 text-white font-bold"
+            id="cart-btn"
+        >
+            <span id="cartFooter-total">R$ 0,00</span>
+            (<span id="cart-count">0</span>)
+            Meu Carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!-- FIM BUTTON CART FOOTER -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>
